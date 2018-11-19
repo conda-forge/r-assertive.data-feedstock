@@ -14,9 +14,9 @@ source:
   sha256: 63883fbae1e3579b8824eb269650a769e8e917ac7992881a572935735c3e5c5e
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,8 +46,7 @@ about:
     to include run-time testing features in their own packages.  End-users will usually
     want to use assertive directly.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
