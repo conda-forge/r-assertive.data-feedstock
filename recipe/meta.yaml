@@ -1,6 +1,5 @@
 {% set version = '0.0-3' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-assertive.data
@@ -13,8 +12,7 @@ source:
   sha256: 5a00fb48ad870d9b3c872ce3d6aa20a7948687a980f49fe945b455339e789b01
 
 build:
-  merge_build_host: True  # [win]
-  number: 4
+  number: 5
   noarch: generic
   rpaths:
     - lib/R/lib/
